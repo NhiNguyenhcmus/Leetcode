@@ -14,6 +14,7 @@ Input: nums = [1,2,3,4]
 Output: [1,3,6,10]
 Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].
 """
+####### Method 1:
 
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
@@ -24,3 +25,25 @@ class Solution:
                 sum = sum + nums[j]
             result.append(sum)
         return result
+
+######## Method 2: (Brute Force)
+
+def runningSum(self, nums: List[int]) -> List[int]:
+   return [sum(nums[:i+1]) for i in range(len(nums))]
+
+######## Method 3: 
+
+def runningSum(self, nums: List[int]) -> List[int]:
+    #our answer array starts with nums[0], which is the 0th running sum
+	runSum = [nums[0]] 
+	for i in range(1,len(nums)):
+        #the running sum up to index i is the sum of nums[i] and the running sum up to index i-1
+		runSum.append(runSum[i-1]+nums[i]) 
+	return runSum
+
+######## Method 3: 
+
+def runningSum(self, nums: List[int]) -> List[int]:
+	for i in range(1,len(nums)):
+		nums[i] = nums[i-1] + nums[i]
+	return nums
