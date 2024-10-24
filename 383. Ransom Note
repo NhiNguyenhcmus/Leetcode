@@ -20,7 +20,7 @@ Input: ransomNote = "aa", magazine = "aab"
 Output: true
 """
 
-##### METHOD:
+##### Script:
 
 from collections import Counter
 
