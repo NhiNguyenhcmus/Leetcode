@@ -19,7 +19,7 @@ Explanation:
 The 2nd customer is the richest with a wealth of 10.
 """
 
-##### Method 1:
+##### Script 1:
 
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
@@ -28,7 +28,7 @@ class Solution:
             sum_list.append(sum(li))
         return max(sum_list)
 
-##### Method 2:
+##### Script 2:
 
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
